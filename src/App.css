@@ -4,3 +4,76 @@
   padding: 2rem;
   text-align: center;
 }
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  margin: 1rem 0;
+
+  label{
+    font-size: .75rem;
+    color: chartreuse;
+    text-align: start;
+  }
+  
+  input{
+    padding: .5rem;
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 4px;
+
+    &:focus{
+      border: 1px solid yellowgreen;
+    }
+  }
+}
+
+.todo-list-container{
+
+  width: min(100%, 400px);
+
+  .todo-list{
+    list-style-type: none;
+
+    .todo-item{
+      padding: .5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:not(:last-child){
+
+        border-bottom: 1px solid red;
+      }
+
+      .todo-left{
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+
+        todo-item.done{
+          text-decoration: line-through;
+          color: chocolate;
+        }
+      }
+
+      .todo-delete{
+        background-color: black;
+        border: none;
+        border-radius: 2px;
+        padding: 2px;
+        cursor: pointer
+      }
+
+      input[type="checkbox"]{
+
+        cursor: pointer;
+        accent-color: yellowgreen;
+        width: 1rem;
+        height: 1rem;
+
+      }
+    }
+  }
+}
